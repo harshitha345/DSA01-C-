@@ -1,0 +1,19 @@
+#include<iostream>
+using namespace std;
+int main(){
+	int n,num,arm=0,rem;
+	cout<<"enter a number:";
+	cin>>n;
+	num=n;
+	while(num!=0){
+		rem=num%10;
+		arm=arm+(rem*rem*rem);
+		num=num/10;
+	}
+	if(n==arm){
+	cout<<"armstrong number:";
+}
+else{
+	cout<<"not armstrong number:";
+}
+}

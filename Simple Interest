@@ -1,0 +1,24 @@
+#include <iostream>
+using namespace std;
+int main() {
+int pri=0,year=0;
+char age=0;
+double interest=0.0;
+cout<<"enter principle:";
+cin>>pri;
+cout<<"enter year:";
+cin>>year;
+cout<<"yes/no:";
+cin>>age;
+if(age=='y')
+{
+ interest=(pri*year*0.12)/100;
+ cout<<interest;
+}
+else
+{
+ interest=(pri*year*0.10)/100;
+ cout<<interest;
+}
+}
+

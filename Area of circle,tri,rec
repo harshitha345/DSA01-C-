@@ -1,0 +1,33 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+class Area {
+private:
+    double area;
+public:
+    Area(double radius) {
+        area = 3.14159 * radius * radius;
+    }
+    Area(double length, double width) {
+        area = length * width;
+    }
+    Area(double a, double b, double c) {
+        double s = (a + b + c) / 2;  
+        area = sqrt(s * (s - a) * (s - b) * (s - c));  
+    }
+    void display() const {
+        cout << "Area: " << area << endl;
+    }
+};
+int main() {
+    Area circle(5.0);
+    cout << "Circle: ";
+    circle.display();
+    Area rectangle(4.0, 6.0);
+    cout << "Rectangle: ";
+    rectangle.display();
+    Area triangle(3.0, 4.0, 5.0);
+    cout << "Triangle: ";
+    triangle.display();
+	return 0;
+}

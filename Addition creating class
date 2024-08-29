@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+class Add {
+public:
+    int num1, num2;
+    Add(int a, int b) {
+        num1 = a;
+        num2 = b;
+    }
+    int getSum() {
+        return num1 + num2;
+    }
+};
+int main() {
+    int a, b;
+    cout << "Enter the first number: ";
+    cin >> a;
+    cout << "Enter the second number: ";
+    cin >> b;
+    Add addition(a, b);
+    cout << "Sum: " << addition.getSum() << endl;
+	return 0;
+}
